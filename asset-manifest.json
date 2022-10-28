@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/frontend-game/static/css/main.caf625c9.css",
+    "main.js": "/frontend-game/static/js/main.95b118df.js",
+    "static/js/787.a69a85fe.chunk.js": "/frontend-game/static/js/787.a69a85fe.chunk.js",
+    "static/media/crab.png": "/frontend-game/static/media/crab.c1313d3946e9f86c45a7.png",
+    "index.html": "/frontend-game/index.html",
+    "main.caf625c9.css.map": "/frontend-game/static/css/main.caf625c9.css.map",
+    "main.95b118df.js.map": "/frontend-game/static/js/main.95b118df.js.map",
+    "787.a69a85fe.chunk.js.map": "/frontend-game/static/js/787.a69a85fe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.caf625c9.css",
+    "static/js/main.95b118df.js"
+  ]
+}
