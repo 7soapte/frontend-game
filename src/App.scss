@@ -1,0 +1,174 @@
+//@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/banner";
+
+@include bsBanner("");
+
+// scss-docs-start import-stack
+// Configuration
+@import "~bootstrap/scss/functions";
+
+// Overwrite default variables
+$component-active-bg: #198754;
+
+@import "~bootstrap/scss/variables";
+
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas";
+@import "~bootstrap/scss/placeholders";
+
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+// Base stylings for the frontend game
+$movement-duration: .5s;
+$flicker-duration: 1.5s;
+$flicker-repeats: 1.5;
+
+.intro-page {
+  position: relative;
+
+  .animate-hint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+  }
+}
+
+.animate-hint {
+  position: fixed;
+  top: 0;
+  right: 50px;
+
+  &:not(.clicked-hint) {
+    animation: flicker-hint 1.5s infinite alternate 20s;
+  }
+}
+
+.clicked-hint {
+  animation: clicked-hint $movement-duration forwards ease-out;
+}
+
+.animate-title {
+  position: relative;
+  top: 20vh;
+  animation: flicker $flicker-duration $flicker-repeats alternate, load-logo forwards $movement-duration ease-in-out $flicker-duration * $flicker-repeats;
+}
+
+.animate-content {
+  opacity: 0;
+  animation: load-content 1s forwards ($flicker-duration * $flicker-repeats + $movement-duration);
+}
+
+/* Bring into view animation */
+@keyframes load-logo {
+  0% {
+    top: 20vh
+  }
+  100% {
+    top: 0
+  }
+}
+
+/* Flickering animation */
+@keyframes flicker {
+
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+    text-shadow: 0 0 4px #407e66,
+    0 0 10px #407e66,
+    0 0 15px #407e66,
+    0 0 20px #264d3c,
+    0 0 35px #264d3c,
+    0 0 60px #264d3c,
+    0 0 70px #264d3c,
+    0 0 100px #264d3c;
+  }
+
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* Flickering animation */
+@keyframes flicker-hint {
+
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+    text-shadow: 0 0 1px #fff,
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #fff,
+    0 0 3px #3c5e4e,
+    0 0 4px #3c5e4e,
+    0 0 4px #3c5e4e,
+    0 0 5px #3c5e4e,
+    0 0 6px #3c5e4e;
+
+  }
+
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes load-content {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes clicked-hint {
+  0% {
+    background-color: #fff;
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    background-color: #fff;
+    transform: scaleY(.1) scaleX(1);
+  }
+  100% {
+    background-color: #fff;
+    transform: scaleY(0) scaleX(3);
+  }
+}

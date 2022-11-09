@@ -1,0 +1,108 @@
+$cube-size: 100px;
+
+.scene {
+  height: $cube-size * 2;
+  width: $cube-size * 2;
+  perspective: 600px;
+
+  .box {
+    height: $cube-size;
+    width: $cube-size;
+    position: absolute;
+    top: $cube-size * .5;
+    left: $cube-size * .5;
+    transform-style: preserve-3d;
+    animation: animate 5s infinite alternate ease-in-out;
+
+    &.__expand {
+      .face.front {
+        transform: translateZ($cube-size *.8);
+      }
+
+      .face.back {
+        transform: translateZ(-$cube-size *.8);
+      }
+
+      .face.left {
+        right: $cube-size * .8;
+      }
+
+      .face.right {
+        left: $cube-size * .8;
+      }
+
+      .face.top {
+        bottom: $cube-size * .8;
+      }
+
+      .face.bottom {
+        top: $cube-size * .8;
+      }
+    }
+
+    .face {
+      background: var(--bs-dark);
+      box-shadow: 0 0 .1rem #fff,
+      0 0 .1rem #fff,
+      0 0 1rem #86cea7,
+      0 0 0.4rem #86cea7,
+      0 0 1.4rem #86cea7,
+      inset 0 0 1.3rem #86cea7;
+      height: $cube-size;
+      width: $cube-size;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      border: 2px solid white;
+      position: absolute;
+      transition: all 1s;
+
+      &.front {
+        transform: translateZ($cube-size *.5);
+      }
+
+      &.back {
+        transform: translateZ(-$cube-size *.5);
+      }
+
+      &.left {
+        right: $cube-size * .5;
+        transform: rotateY(-90deg);
+      }
+
+      &.right {
+        left: $cube-size * .5;
+        transform: rotateY(90deg);
+      }
+
+      &.top {
+        bottom: $cube-size * .5;
+        transform: rotateX(90deg);
+      }
+
+      &.bottom {
+        top: $cube-size * .5;
+        transform: rotateX(-90deg);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(0deg) rotateY(90deg);
+  }
+  50% {
+    transform: rotateX(90deg) rotateY(0deg);
+  }
+  75% {
+    transform: rotateX(0deg) rotateY(-90deg);
+  }
+  100% {
+    transform: rotateX(-90deg) rotateY(0deg);
+  }
+}
