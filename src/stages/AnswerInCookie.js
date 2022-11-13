@@ -1,23 +1,26 @@
-import {useEffect} from 'react';
-import SubmitAnswerTemplate from '../setup/SubmitAnswerTemplate';
+import {useEffect} from 'react'
+import SubmitAnswerTemplate from '../setup/SubmitAnswerTemplate'
 
-function ConsoleLog({cb, solution, hint}) {
+function AnswerInCookie({cb, solution, hint}) {
     useEffect(() => {
-        console.log('The answer is: ', solution)
-    }, [solution])
+        document.cookie = `the_answer_is=${solution}`
+        return () => {
+            document.cookie = ''
+        }
+    })
 
     return (
         <>
             <div className="animate-title">
                 <h4>
                     <span className="badge bg-gradient me-2">Riddle</span>
-                    The developer wants to tell you something in the console.
+                    You received a cookie for your hard work.
                 </h4>
             </div>
             {hint ? (
                 <p>
                     <code>
-                        Right click the page -> inspect -> click the console tab{' '}
+                        Go to your console and check your cookie with "document.cookie".
                     </code>
                 </p>
             ) : (
@@ -29,4 +32,4 @@ function ConsoleLog({cb, solution, hint}) {
     )
 }
 
-export default ConsoleLog;
+export default AnswerInCookie

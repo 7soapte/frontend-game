@@ -8,9 +8,8 @@
 @import "~bootstrap/scss/functions";
 
 // Overwrite default variables
-$component-active-bg: #198754;
 
-@import "~bootstrap/scss/variables";
+@import "./variables";
 
 @import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
@@ -56,7 +55,7 @@ $component-active-bg: #198754;
 @import "~bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
-// Base stylings for the frontend game
+// Base styling for the frontend game
 $movement-duration: .5s;
 $flicker-duration: 1.5s;
 $flicker-repeats: 1.5;
@@ -89,7 +88,7 @@ $flicker-repeats: 1.5;
 .animate-title {
   position: relative;
   top: 20vh;
-  animation: flicker $flicker-duration $flicker-repeats alternate, load-logo forwards $movement-duration ease-in-out $flicker-duration * $flicker-repeats;
+  animation: flicker $flicker-duration $flicker-repeats alternate-reverse, load-logo forwards $movement-duration ease-in-out $flicker-duration * $flicker-repeats;
 }
 
 .animate-content {
@@ -136,11 +135,11 @@ $flicker-repeats: 1.5;
     0 0 1px #fff,
     0 0 2px #fff,
     0 0 3px #fff,
-    0 0 3px #3c5e4e,
-    0 0 4px #3c5e4e,
-    0 0 4px #3c5e4e,
-    0 0 5px #3c5e4e,
-    0 0 6px #3c5e4e;
+    0 0 3px #e57eb0,
+    0 0 4px #e57eb0,
+    0 0 4px #e57eb0,
+    0 0 5px #e57eb0,
+    0 0 6px #e57eb0;
 
   }
 
