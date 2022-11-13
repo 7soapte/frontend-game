@@ -55,8 +55,7 @@ function SubmitAnswerBtnMoving({cb, solution, hint}) {
             {hint ? (
                 <p>
                     <code>
-                        Go to your console and check your cookie with
-                        "document.cookie".
+                        Click "Riddle", you got the rest!
                     </code>
                 </p>
             ) : (
