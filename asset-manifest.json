@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/frontend-game/static/css/main.a6827e4a.css",
-    "main.js": "/frontend-game/static/js/main.a09566c7.js",
+    "main.js": "/frontend-game/static/js/main.4701427f.js",
     "index.html": "/frontend-game/index.html",
     "main.a6827e4a.css.map": "/frontend-game/static/css/main.a6827e4a.css.map",
-    "main.a09566c7.js.map": "/frontend-game/static/js/main.a09566c7.js.map"
+    "main.4701427f.js.map": "/frontend-game/static/js/main.4701427f.js.map"
   },
   "entrypoints": [
     "static/css/main.a6827e4a.css",
-    "static/js/main.a09566c7.js"
+    "static/js/main.4701427f.js"
   ]
 }
