@@ -1,13 +1,13 @@
 import NeonCube from '../setup/NeonCube'
 
-function EndingScreen({hintsClicked}) {
+function EndingScreen({hintsClicked, timeSpent}) {
     return (
         <>
             <h3 className={'mb-5'}>
                 Thank you for playing the game and good job getting to the
                 finish!
             </h3>
-            <NeonCube  hintsClicked={hintsClicked}/>
+            <NeonCube  hintsClicked={hintsClicked} showControls={true}/>
             <p className={''}>
                 For suggestions and feedback feel free to contact me at
                 <br />

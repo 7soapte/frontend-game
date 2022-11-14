@@ -15,6 +15,7 @@ import ConsoleLog from './stages/ConsoleLog'
 import HiddenButton from './stages/HiddenButton'
 import AnswerInCookie from './stages/AnswerInCookie'
 import SubmitAnswerBtnMoving from './stages/SubmitAnswerBtnMoving'
+import BossStage10 from './stages/BossStage10'
 
 function App() {
     const [stageNum, setStageNum] = useState(0)
@@ -34,9 +35,9 @@ function App() {
             ClipBoard,
             AnswerInCookie,
             SubmitAnswerBtnMoving,
+            BossStage10,
             EndingScreen,
         ]
-        // return [IntroScreen, SubmitAnswerBtnMoving, EndingScreen]
     }, [])
 
     const solutions = useMemo(() => {
@@ -71,7 +72,7 @@ function App() {
         <div className="container h-100 d-flex flex-column">
             <h1 className="text-center animate-title">The Frontend Game</h1>
             <p>
-                {stageNum > 0 && stageNum < stagesArr.length - 2
+                {stageNum > 0 && stageNum < stagesArr.length - 1
                     ? `Stage ${stageNum} of ${stagesArr.length - 2}`
                     : null}
             </p>
