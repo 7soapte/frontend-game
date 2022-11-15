@@ -1,5 +1,5 @@
 import './HiddenButton.scss'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import SubmitAnswerTemplate from '../setup/SubmitAnswerTemplate'
 
 function HiddenButton({cb, solution, hint}) {
@@ -8,6 +8,10 @@ function HiddenButton({cb, solution, hint}) {
     const showAnswer = () => {
         setBtnAnswer(true)
     }
+
+    useEffect(()=> {
+      console.clear();
+    })
 
     return (
         <>

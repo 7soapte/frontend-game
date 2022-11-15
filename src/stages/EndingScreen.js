@@ -1,12 +1,12 @@
 import NeonCube from '../setup/NeonCube'
 
-function EndingScreen({hintsClicked, timeSpent}) {
+function EndingScreen({hintsClicked}) {
     return (
         <>
-            <h3 className={'mb-5'}>
+            <h4 className={'mb-5'}>
                 Thank you for playing the game and good job getting to the
                 finish!
-            </h3>
+            </h4>
             <NeonCube  hintsClicked={hintsClicked} showControls={true}/>
             <p className={''}>
                 For suggestions and feedback feel free to contact me at
@@ -32,6 +32,7 @@ function EndingScreen({hintsClicked, timeSpent}) {
                     Codepen
                 </a>
             </p>
+          <a href="/frontend-game/" rel="noreferrer" className="btn btn-sm btn-success">Replay game.</a>
         </>
     )
 }

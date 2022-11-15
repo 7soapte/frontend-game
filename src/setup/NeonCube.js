@@ -6,18 +6,11 @@ function NeonCube({hintsClicked, showControls}) {
 
     return (
         <div
-            className={'d-flex flex-column justify-content-center align-items-center mt-5'}
+            className={
+                'd-flex justify-content-center align-items-center my-5'
+            }
         >
-            {showControls ? (
-                <input
-                  className="btn btn-sm btn-success mb-3"
-                    type="button"
-                    value={'Expand cube'}
-                    onClick={() => setInputEf(!inputEf)}
-                />
-            ) : null}
-
-            <div className="scene mb-3">
+            <div className="scene">
                 <div
                     className={
                         'box' + (showControls && inputEf ? ' __expand' : '')
@@ -33,6 +26,15 @@ function NeonCube({hintsClicked, showControls}) {
                     <div className="face bottom">Big brain!</div>
                 </div>
             </div>
+
+            {showControls ? (
+                <input
+                    className="btn btn-sm btn-secondary ms-5"
+                    type="button"
+                    value={'Expand cube'}
+                    onClick={() => setInputEf(!inputEf)}
+                />
+            ) : null}
         </div>
     )
 }

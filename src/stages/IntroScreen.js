@@ -19,8 +19,8 @@ function IntroScreen({cb, hint}) {
             <p className="mb-0 fw-bold text-success">Requirements to play:</p>
             <ul className="list-group list-unstyled">
                 <li>Frontend development knowledge</li>
-                <li>Dekstop browser</li>
-                <li>HTML, CSS, JS, Developer tools etc</li>
+                <li>Desktop browser</li>
+                <li>HTML, CSS, JS, Developer tools etc.</li>
             </ul>
             <hr />
             <p>
