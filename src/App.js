@@ -13,6 +13,8 @@ import ExpandClass from './stages/ExpandClass'
 import CatClass from './stages/CatClass'
 import ConsoleLog from './stages/ConsoleLog'
 import HiddenButton from './stages/HiddenButton'
+import SearchParams from './stages/SearchParams'
+import CaesarCipher from './stages/CaesarCipher'
 import AnswerInCookie from './stages/AnswerInCookie'
 import SubmitAnswerBtnMoving from './stages/SubmitAnswerBtnMoving'
 import BossStage10 from './stages/BossStage10'
@@ -33,6 +35,8 @@ function App() {
             ConsoleLog,
             HiddenButton,
             ClipBoard,
+            SearchParams,
+            CaesarCipher,
             AnswerInCookie,
             SubmitAnswerBtnMoving,
             BossStage10,
