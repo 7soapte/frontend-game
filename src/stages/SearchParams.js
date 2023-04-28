@@ -1,6 +1,6 @@
 import SubmitAnswerTemplate from '../setup/SubmitAnswerTemplate'
 
-function ClipBoard({cb, solution, hint}) {
+function SearchParams({cb, solution, hint}) {
     window.history.replaceState(null, null, `?answer_is=${solution}`)
 
     return (
@@ -26,4 +26,4 @@ function ClipBoard({cb, solution, hint}) {
     )
 }
 
-export default ClipBoard
+export default SearchParams
