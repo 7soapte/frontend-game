@@ -2,7 +2,7 @@ import SubmitAnswerTemplate from '../setup/SubmitAnswerTemplate'
 import {useEffect, useState} from 'react'
 import Notification from '../setup/Notification'
 
-function ClipBoard({cb, solution, hint}) {
+function CaesarCipher({cb, solution, hint}) {
     const [fakeAnswer, setFakeAnswer] = useState('')
     const [title, setTitle] = useState(`The answer is: ${solution}`)
     const [hasError, setHasError] = useState(false)
@@ -118,4 +118,4 @@ function ClipBoard({cb, solution, hint}) {
     )
 }
 
-export default ClipBoard
+export default CaesarCipher
